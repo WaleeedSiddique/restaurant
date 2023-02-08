@@ -256,4 +256,20 @@ i{
     width: 600px;
 
 }
-
+.chef-container{
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    padding: 100px 30px;
+    text-align: center;
+}
+.chef-container .card img{
+    height: 200px;
+    width: auto;
+    border-radius: 50%;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
