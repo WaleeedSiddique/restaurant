@@ -273,3 +273,7 @@ i{
     justify-content: space-around;
     list-style: none;
 }
+.footer li i{
+    padding-right: 10px;
+    padding-top: 5px;
+}
