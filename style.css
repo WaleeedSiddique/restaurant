@@ -64,6 +64,10 @@ li{
     font-size: 16px;
 
 }
+.div-inner{
+    display: grid;
+    grid-template-columns: auto auto;
+}
 .hero-btn{
     width: 170px;
     background-color: var(--primary-color);
@@ -104,11 +108,11 @@ li{
     height: 100vh;
     width: 100%;
     opacity: 1;
-    z-index: -1;
-    
+    z-index: -1;   
 }
 .main-hero{
     display: flex;
+    height: 100vh;
 }
 .hero-div{
     height: 85vh;
@@ -118,7 +122,6 @@ li{
     justify-content: center;
     font-size: 17px;
     line-height: 25px;
-    float: left;
     padding-top: 100px;
 }
 .hero-div>div>h1{
@@ -139,7 +142,7 @@ li{
     0%{rotate: 360deg;}
 }
 .cards-div{
-    height: 30vh;
+    height: auto;
     width: auto;
     display: flex;
     justify-content: center;
@@ -158,35 +161,35 @@ li{
     margin-bottom: 20px;
 }
 .container{
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 50px 0px 50px 90px;
-   display: flex;
+    display: flex;
 }
 .container-left{
     flex: 1;
 }
 .img-1{
-    height: 300px;
-    width: 300px;
+    height: 240px;
+    width: 250px;
 }
 .img-2{
     height: 170px;
 }
 .img-3{
-    width: 200px;
+    width: 150px;
     margin-left: 50px ;
 }
 .img-4{
-    width: 280px;
-    height: 250px;
+    width: 250px;
+    height: 220px;
 }
 .bout-us{
     font-family: 'Pacifico', cursive;
 }
 .container-right{
     flex: 1;
-    padding: 150px 50px 0px 0px;  
-    height: 100%;
+    padding: 65px 50px 0px 0px;  
+    height: auto;
 }
 .container-right div h1,p{
     margin-top: 10px;
@@ -203,7 +206,7 @@ li{
 }
 
 .menu-div{
-    height: 10vh;
+    height: auto;
     width: auto;    
     display: flex;
     justify-content: center;
@@ -214,25 +217,28 @@ li{
 .items-div{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 .items-div table i{
     padding: 0px 10px;
 }
 .form-div{
     display: flex;
-    height: 80vh;
-    width: 100%;
+    height: auto;
+    width: auto;
     padding: 40px;
 }
-.form-left,.form-right{
+.form-left{
+    flex: 1;
+}
+.form-right{
     flex: 1;
 }
 .form-left{
     padding: 20px 0px 10px 30px;
 }
 .form-left input{
-    width: 80%;
+    width: 100%;
     font-size: 16px;
     border-radius: 5px;
     height: 50px;
@@ -245,10 +251,10 @@ li{
     
 }
 .form-right iframe{
-    margin: 50px 0px 0px 20px;
+     padding: 70px 0px 0px 30px;
     border-radius: 7px;
     box-shadow: 5px gray;
-    height: 360px;
+    height: 370px;
     width: 600px;
 
 }
@@ -258,6 +264,7 @@ li{
     justify-content: space-around;
     padding: 100px 30px;
     text-align: center;
+    height: auto;
 }
 .chef-container .card img{
     height: 200px;
@@ -310,4 +317,114 @@ li{
     color: var(--secondary-color);
     background-color: var(--primary-color);
     font-weight: bold;
+}
+@media screen and (max-width: 1190px){
+    .rotate-image .img-rotatary{
+        width: auto;
+        height: 450px;
+        animation: rotation 30.5s  infinite linear;
+        padding-top: 20px;
+    }
+    .hero-div{
+      padding-top: 50px;
+    }
+    .hero-div>div>h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: var(--body-light);
+        line-height: 76.5px;
+   }
+}
+@media screen and (max-width: 1090px)and (min-width:991px){
+    .container{
+        margin-top: 50px;
+        padding: 50px 0px 50px 30px;
+    }
+    .rotate-image .img-rotatary{
+        width: auto;
+        height: 450px;
+        animation: rotation 30.5s  infinite linear;
+        padding-top: 20px;
+    }
+    .navbar{
+        padding: 40px 32px;
+    }
+    .hero-div{
+        padding: 30px 0px 0px 25px;
+    }
+    .cards-div{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width:665px){
+    .navbar ul{
+        visibility: hidden;
+    }
+    .main-hero{
+        display: block;
+        text-align: center;
+        padding: 30px 100px;
+    }
+    .hero-div::before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background:linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(imgaes/bg-hero.jpg);
+        height: 230vh;
+        width: 100%;
+        opacity: 1;
+        z-index: -1;   
+    }
+    .cards-div{
+        margin-top: 60%;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .rotate-image .img-rotatary{
+        width: auto;
+        height: 600px;
+        animation: rotation 30.5s  infinite linear;
+        padding-top: 20px;
+    }
+    .card{
+        margin-top: 10px;
+    }
+    .container{
+        display: block;
+    }
+    .img-3{
+        width: 252px;
+        margin-left: 0px;
+        height: 170px;
+    }
+    .img-2{
+        height:237px;
+    }
+    .img-4{
+        width: 390px;
+        height: 235px;
+    }
+    .container-right{
+        text-align: center
+    }
+    .container-table{
+        display: flex;
+        justify-content: center;
+    }
+    .form-div{
+        display: block;
+    }
+    .form-right iframe{
+        width: 100%;
+    }
+    .chef-container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 }
