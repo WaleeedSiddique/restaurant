@@ -27,9 +27,63 @@ i{
     box-sizing: border-box;
     height: 8vh;
     width: auto;
-    /* font-weight: bold; */
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
     color: var(--primary-color);
 } 
+.main {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.sidebar {
+    background-color: black;
+    height: 66vh;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 15%;
+    left: -2000px;
+    /* display: none; */
+    /* float: right; */
+    z-index: 1;
+}
+
+.openbtn {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    color: var(--secondary-color); 
+    border: 3px solid var(--body-light);
+    border-radius: 10px;
+}
+
+.sidebar a {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-show {
+    left: 0px;
+}
+
+#main {
+    /* background-color: #fff !important; */
+    display: none;
+}
 li{
     list-style: none;
 }
@@ -63,6 +117,26 @@ li{
     border-radius: 2px;
     font-size: 16px;
 
+}
+.navbar ul li .drop-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    background-color: #0f172b;
+    display: none;
+    
+}
+.navbar ul li:hover{
+    color: var(--primary-color);
+}
+.navbar ul li:hover .drop-menu{
+    display: block;
+   
+}
+.drop-menu li{
+    padding: 5px 0px;
+    border-bottom: 1px solid var(--secondary-color);
 }
 .div-inner{
     display: grid;
@@ -176,7 +250,7 @@ li{
     height: 170px;
 }
 .img-3{
-    width: 150px;
+    width: 207px;
     margin-left: 50px ;
 }
 .img-4{
@@ -360,6 +434,12 @@ li{
 @media screen and (max-width: 991px) and (min-width:665px){
     .navbar ul{
         visibility: hidden;
+    }
+    .navbar{
+        padding:40px 0px 40px 20px;
+    }
+    #main {
+        display: block;
     }
     .main-hero{
         display: block;
