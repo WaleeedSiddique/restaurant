@@ -88,13 +88,14 @@ i{
     /* background-color: #fff !important; */
     display: none;
 }
-li{
+.navbar>ul>li{
     list-style: none;
+     line-height: 50px;
 }
 .navbar ul{
     display: flex;
     list-style: none;
-    /* height: 10vh; */
+    height: 10vh;
     font-size: var(--font-size);
     font-weight: bold;
     /* padding-top: 10px; */
@@ -141,10 +142,14 @@ li{
 .drop-menu li{
     padding: 5px 0px;
     border-bottom: 1px solid var(--secondary-color);
+    line-height: 15px !important;
 }
 .div-inner{
     display: grid;
     grid-template-columns: auto auto;
+}
+li{
+    list-style: none;
 }
 .hero-btn{
     width: 170px;
