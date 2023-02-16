@@ -358,6 +358,7 @@ li{
     display: flex;
     justify-content: space-around;
     list-style: none;
+    padding: 50px 0px;
     background-color: #0f172b;
     color: var(--secondary-color);
 }
@@ -372,7 +373,7 @@ li{
     text-decoration: none;
 }
 .footer ul li{
-    padding-bottom: 10px;
+    padding-top: 15px;
 }
 .icons-li i{
     padding: 5px 7px;
@@ -500,7 +501,7 @@ li{
 }
 .hero-div-about div h1{
     font-size: 55px;
-    margin-top: 20px;
+    margin-top: 70px;
 }
 .sub-about ul{
     display: flex;
